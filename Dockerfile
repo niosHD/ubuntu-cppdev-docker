@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 
 LABEL maintainer Mario Werner <mario.werner@iaik.tugraz.at>
 
-#install commonly used packages for c++ development
+# install commonly used packages for c++ development
 RUN apt-get update && apt-get install -y \
   build-essential \
   clang \
@@ -20,3 +20,7 @@ RUN apt-get update && apt-get install -y \
   ninja-build \
   valgrind \
   wget
+
+# install docker to permit building images inside of the container
+# https://docs.gitlab.com/ce/ci/docker/using_docker_build.html#using-docker-build
+RUN curl -sSL https://get.docker.com/ | sh
