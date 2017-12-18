@@ -18,8 +18,11 @@ RUN apt-get update && apt-get install -y \
   libsqlite3-dev \
   libssl-dev \
   ninja-build \
+  python \
+  python-pip \
   valgrind \
-  wget
+  wget \
+  && pip install --upgrade pip conan conan_package_tools
 
 # install docker to permit building images inside of the container
 # https://docs.gitlab.com/ce/ci/docker/using_docker_build.html#using-docker-build
