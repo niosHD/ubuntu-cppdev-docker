@@ -30,7 +30,8 @@ RUN apt-get update && apt-get install -y \
   python-pip \
   valgrind \
   wget \
-  && pip install --upgrade pip conan conan_package_tools \
+  && pip install --upgrade pip \
+  && pip install --upgrade conan conan_package_tools \
   && update-alternatives --install "/usr/bin/ld" "ld" "/usr/bin/ld.gold" 10 \
   && update-alternatives --install "/usr/bin/ld" "ld" "/usr/bin/ld.bfd" 20
 
