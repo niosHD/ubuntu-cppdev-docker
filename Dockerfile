@@ -28,6 +28,8 @@ RUN apt-get update && apt-get install -y \
   ninja-build \
   python \
   python-pip \
+  python3 \
+  python3-pip \
   valgrind \
   wget \
   && pip install --upgrade pip \
