@@ -19,6 +19,8 @@ RUN apt-get update && apt-get install -y \
   cmake \
   curl \
   doxygen \
+  gcc-multilib \
+  g++-multilib \
   git \
   graphviz \
   lcov \
