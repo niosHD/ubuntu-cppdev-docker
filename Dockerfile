@@ -11,6 +11,10 @@ LABEL maintainer Mario Werner <mario.werner@iaik.tugraz.at>
 # `export PATH="/usr/lib/ccache:$PATH"`. Note that the default cache directory
 # of ccache can be configured by exporting `CCACHE_DIR`.
 RUN apt-get update && apt-get install -y \
+  autoconf \
+  automake \
+  autopoint \
+  bison \
   build-essential \
   ccache \
   clang \
@@ -19,6 +23,7 @@ RUN apt-get update && apt-get install -y \
   cmake \
   curl \
   doxygen \
+  flex \
   gcc-multilib \
   g++-multilib \
   git \
