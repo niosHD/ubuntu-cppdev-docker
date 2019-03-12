@@ -27,17 +27,18 @@ RUN apt-get update && apt-get install -y \
   gcc-multilib \
   g++-multilib \
   git \
+  gperf \
   graphviz \
   lcov \
   libboost-all-dev \
   libsqlite3-dev \
   libssl-dev \
   ninja-build \
+  pkg-config \
   python3 \
   python3-pip \
   valgrind \
   wget \
-  gperf \
   && pip3 install --upgrade conan conan_package_tools \
   && update-alternatives --install "/usr/bin/ld" "ld" "/usr/bin/ld.gold" 10 \
   && update-alternatives --install "/usr/bin/ld" "ld" "/usr/bin/ld.bfd" 20
