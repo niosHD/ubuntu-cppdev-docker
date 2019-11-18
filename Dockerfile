@@ -43,7 +43,7 @@ RUN apt-get update && apt-get install -y \
   && update-alternatives --install "/usr/bin/ld" "ld" "/usr/bin/ld.gold" 10 \
   && update-alternatives --install "/usr/bin/ld" "ld" "/usr/bin/ld.bfd" 20
 
-# install docker to permit building images inside of the container
+# Install docker to permit building images inside of the container.
 # https://docs.gitlab.com/ce/ci/docker/using_docker_build.html#using-docker-build
 RUN curl -sSL https://get.docker.com/ | sh
 
