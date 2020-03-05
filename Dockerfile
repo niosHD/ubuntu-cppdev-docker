@@ -39,7 +39,7 @@ RUN apt-get update && apt-get install -y \
   python3-pip \
   valgrind \
   wget \
-  && pip3 install --upgrade conan conan_package_tools \
+  && pip3 install --upgrade click conan conan_package_tools pyelftools \
   && update-alternatives --install "/usr/bin/ld" "ld" "/usr/bin/ld.gold" 10 \
   && update-alternatives --install "/usr/bin/ld" "ld" "/usr/bin/ld.bfd" 20
 
