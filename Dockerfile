@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 
 LABEL maintainer Mario Werner <mario.werner@iaik.tugraz.at>
 
-# Setup default locals to UTF-8.
+# Set default local to UTF-8.
 # https://stackoverflow.com/a/41648500
 ENV LANG C.UTF-8
 ENV LC_ALL C.UTF-8
@@ -43,6 +43,7 @@ RUN apt-get update && apt-get install -y \
   python3-pip \
   valgrind \
   wget \
+  && rm -rf /var/lib/apt/lists/* \
   && pip3 install --upgrade click conan conan_package_tools pyelftools PyYAML \
   && update-alternatives --install "/usr/bin/ld" "ld" "/usr/bin/ld.gold" 10 \
   && update-alternatives --install "/usr/bin/ld" "ld" "/usr/bin/ld.bfd" 20
