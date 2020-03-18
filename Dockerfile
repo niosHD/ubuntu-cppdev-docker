@@ -28,8 +28,9 @@ RUN apt-get update && apt-get install -y \
   curl \
   doxygen \
   flex \
-  gcc-multilib \
   g++-multilib \
+  gcc-multilib \
+  gettext \
   git \
   gperf \
   graphviz \
@@ -44,7 +45,7 @@ RUN apt-get update && apt-get install -y \
   valgrind \
   wget \
   && rm -rf /var/lib/apt/lists/* \
-  && pip3 install --upgrade click conan conan_package_tools pyelftools PyYAML \
+  && pip3 install --upgrade click conan conan_package_tools ConanTools pyelftools PyYAML \
   && update-alternatives --install "/usr/bin/ld" "ld" "/usr/bin/ld.gold" 10 \
   && update-alternatives --install "/usr/bin/ld" "ld" "/usr/bin/ld.bfd" 20
 
